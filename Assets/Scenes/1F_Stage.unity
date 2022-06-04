@@ -141,8 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &26720860
-BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5719,7 +5717,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 724723571980944192, guid: 8d20ade1bb6f4d54abf325559a353ada, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
