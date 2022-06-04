@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Walk : MonoBehaviour {
-  public float maxSpeed = 15F;
-  public float speed = 10F;
+  public float maxSpeed = 10F;
+  public float speed = 3F;
   Rigidbody2D rigid;
   SpriteRenderer spriteRenderer;
   Animator anim;
@@ -13,7 +13,6 @@ public class Walk : MonoBehaviour {
     rigid = GetComponent<Rigidbody2D>();
     spriteRenderer = GetComponent<SpriteRenderer>();
     anim = GetComponent<Animator>();
-    maxSpeed = speed;
   }
 
   void Update(){
@@ -40,7 +39,7 @@ public class Walk : MonoBehaviour {
     rigid.AddForce(Vector2.right * h , ForceMode2D.Impulse);
     rigid.velocity = new Vector2(h * maxSpeed , rigid.velocity.y);
     if(Input.GetKey(KeyCode.LeftShift)){
-      maxSpeed = 7;
+      maxSpeed = speed+10F;
       anim.SetBool("Run", true);
     }
     else{
