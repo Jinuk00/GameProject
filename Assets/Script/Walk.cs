@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Walk : MonoBehaviour {
-  public float maxSpeed;
-  public float speed;
+  public float maxSpeed = 15F;
+  public float speed = 10F;
   Rigidbody2D rigid;
   SpriteRenderer spriteRenderer;
   Animator anim;
@@ -13,7 +13,6 @@ public class Walk : MonoBehaviour {
     rigid = GetComponent<Rigidbody2D>();
     spriteRenderer = GetComponent<SpriteRenderer>();
     anim = GetComponent<Animator>();
-    speed=3F;
     maxSpeed = speed;
   }
 
