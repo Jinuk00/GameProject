@@ -6,6 +6,8 @@ TagManager:
   tags:
   - platform
   - Bullet
+  - Skill
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - 
   - Player
   - Bullet
-  - 
+  - Skill
   - 
   - 
   - 
