@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -28,11 +29,13 @@ public class Player : MonoBehaviour
 
     private Animator animator;
     // Start is called before the first frame update
+
+    Rigidbody2D rigid;
     void Start()
     {
         if (instance == null)
         {
-            DontDestroyOnLoad(this.gameObject); // 게임 오브젝트 파괴금지
+            // DontDestroyOnLoad(this.gameObject); // 게임 오브젝트 파괴금지
 
             // 애니메이터 컴포넌트 가져오기
             boxCollider = GetComponent<BoxCollider2D>();
@@ -47,6 +50,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+    void OnTriggerEnter2D(Collider2D other) {
+            if (other.gameObject.tag =="Bullet")
+            {
+                Debug.Log("부딪힘");
+                print("부딪힘");
+                Destroy(this.gameObject);
+                SceneManager.LoadScene("1F_Stage");
+            }    
+        }
 }
