@@ -20,12 +20,12 @@ public class Player : MonoBehaviour
 
     public float runSpeed; // Shift키 입력시 증가하는 속도
     private float applyRunSpeed; // Shift키 입력시 연산되는 증가 속도
-    private bool applyRunFlag = false; // Shift키 입력여부
+    // private bool applyRunFlag = false; // Shift키 입력여부
 
     public int walkCount; // 방향키 입력시 이동값을 정하기 위한 값
     private int currentWalkCount; // 이동값 리셋을 위한 값
 
-    private bool canMove = true; // 방향키 이동 반복실행 방지를 위한 값
+    // private bool canMove = true; // 방향키 이동 반복실행 방지를 위한 값
 
     private Animator animator;
     // Start is called before the first frame update
@@ -56,10 +56,8 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
             if (other.gameObject.tag =="Bullet")
             {
-                Debug.Log("부딪힘");
-                print("부딪힘");
                 Destroy(this.gameObject);
-                SceneManager.LoadScene("1F_Stage");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }    
         }
 }

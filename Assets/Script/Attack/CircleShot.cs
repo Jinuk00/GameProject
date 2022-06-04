@@ -9,12 +9,12 @@ public class CircleShot : MonoBehaviour
 
     public Transform Dragon;
 
-    private void Start()
+    public void Start()
     {
         shot();
     }
 
-    void shot()
+    public void shot()
     {
         Vector2 pos;
         pos = Dragon.transform.position;

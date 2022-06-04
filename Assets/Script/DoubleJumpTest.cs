@@ -51,7 +51,7 @@ public class DoubleJumpTest : MonoBehaviour
       RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 3, LayerMask.GetMask("platform"));
       if(rayHit.collider != null){
         // if(rayHit.distance < 0.4f){
-          Debug.Log(rayHit.collider.name);
+          // Debug.Log(rayHit.collider.name);
             anim.SetBool("isJumping", false);
             anim.SetBool("DoubleJump", false);
         // }
