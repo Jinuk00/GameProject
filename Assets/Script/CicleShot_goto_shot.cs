@@ -11,6 +11,9 @@ public class CicleShot_goto_shot : MonoBehaviour
     //발사될 총알 오브젝트
     public GameObject bullet;
 
+    public Transform Dragon;
+
+
     private void Start()
     {
         shot();
@@ -19,6 +22,8 @@ public class CicleShot_goto_shot : MonoBehaviour
 
     void shot()
     {
+        Vector2 pos;
+        pos = Dragon.transform.position;
         //Target방향으로 발사될 오브젝트 수록
         var bl = new List<Transform>();
 
@@ -28,10 +33,10 @@ public class CicleShot_goto_shot : MonoBehaviour
                 var temp = Instantiate(bullet);
 
                 //2초후 삭제
-                Destroy(temp, 2f);
+                Destroy(temp, 10f);
 
                 //총알 생성 위치를 (0,0) 좌표로 한다.
-                temp.transform.position = Vector2.zero;
+                temp.transform.position = pos;
 
                 //?초후에 Target에게 날아갈 오브젝트 수록
                 bl.Add(temp.transform);

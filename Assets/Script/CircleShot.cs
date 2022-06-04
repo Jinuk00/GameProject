@@ -7,6 +7,8 @@ public class CircleShot : MonoBehaviour
  //발사될 총알 오브젝트
     public GameObject bullet;
 
+    public Transform Dragon;
+
     private void Start()
     {
         shot();
@@ -14,6 +16,8 @@ public class CircleShot : MonoBehaviour
 
     void shot()
     {
+        Vector2 pos;
+        pos = Dragon.transform.position;
         //360번 반복
         for (int i = 0; i < 360; i += 13)
         {
@@ -24,7 +28,7 @@ public class CircleShot : MonoBehaviour
             Destroy(temp, 2f);
 
             //총알 생성 위치를 (0,0) 좌표로 한다.
-            temp.transform.position = Vector2.zero;
+            temp.transform.position = pos;
 
             //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
             temp.transform.rotation = Quaternion.Euler(0, 0, i);
