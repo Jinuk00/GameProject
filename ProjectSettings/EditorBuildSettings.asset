@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outro.unity
     guid: 2c647b9e7053f5e4483d5a49e0f6dfde
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 07c39552430a7eb479198b39ef93ff42
+  - enabled: 1
+    path: Assets/Scenes/GameClear.unity
+    guid: d039ba3beef1a7c4f8eba119a11a4d27
   m_configObjects: {}
