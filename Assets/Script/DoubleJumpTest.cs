@@ -47,7 +47,7 @@ public class DoubleJumpTest : MonoBehaviour
   void FixedUpdate(){
     //Landing Platform
     if(rb.velocity.y <0){
-      Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
+      // Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
       RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 3, LayerMask.GetMask("platform"));
       if(rayHit.collider != null){
         // if(rayHit.distance < 0.4f){
