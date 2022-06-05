@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pattern : MonoBehaviour
 {
-    public Transform Player;
+    public GameObject Player;
 
     public Transform Boss;
 
@@ -15,6 +15,7 @@ public class Pattern : MonoBehaviour
     // public GameObject CicleShot_goto_shot;
     void Start()
     {
+        Player=GameObject.FindWithTag("Player");
         timer= 0F;
         wait=3;
     }
