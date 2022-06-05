@@ -3649,57 +3649,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 949125877351975545, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_Size.x
-      value: 0.2114853
-      objectReference: {fileID: 0}
-    - target: {fileID: 949125877351975545, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_Size.y
-      value: 0.53865886
-      objectReference: {fileID: 0}
-    - target: {fileID: 949125877351975545, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.033062845
-      objectReference: {fileID: 0}
-    - target: {fileID: 949125877351975545, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.1339787
-      objectReference: {fileID: 0}
-    - target: {fileID: 949125877351975545, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 995717708900162280, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_Size.x
-      value: 0.17075005
-      objectReference: {fileID: 0}
-    - target: {fileID: 995717708900162280, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_Size.y
-      value: 0.5266602
-      objectReference: {fileID: 0}
-    - target: {fileID: 995717708900162280, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.035816383
-      objectReference: {fileID: 0}
-    - target: {fileID: 995717708900162280, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.13464066
-      objectReference: {fileID: 0}
-    - target: {fileID: 995717708900162281, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: jumpForce
-      value: 700
-      objectReference: {fileID: 0}
     - target: {fileID: 995717708900162282, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 995717708900162290, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 995717708900162290, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
-      propertyPath: maxSpeed
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 995717708900162292, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
       propertyPath: m_RootOrder
@@ -3803,7 +3755,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e5dcb55e7883f614ebbafb77bb8e6bbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

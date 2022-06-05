@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f2d9bfce0b42b4dbb3015c83ee1d8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  center: {fileID: 4855891005877782806, guid: 33ec9d7eacbc4ba4482fadc143e7221f, type: 3}
+  center: {fileID: 7946760394295530852, guid: b0ca4d3f50a30ff409f5bcf5abca4912, type: 3}
   target: {fileID: 995717708900162292, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
 --- !u!50 &5277012247359888856
 Rigidbody2D:

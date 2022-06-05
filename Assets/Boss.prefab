@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7946760394295530852}
   - component: {fileID: 7946760394295530855}
   - component: {fileID: 7946760394295530854}
+  - component: {fileID: -5396115327982380581}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7946760394295530857}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9770957, w: 0.21280035}
   m_LocalPosition: {x: 16.2, y: 5.9, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
@@ -102,3 +103,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5396115327982380581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7946760394295530857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5847e0cc9d8bfc2428340055fac2a597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 995717708900162292, guid: 8fc55891b3da16e4db1eb59d538c3b36, type: 3}
+  Boss: {fileID: 7946760394295530852}
+  Bullet: {fileID: 1861310007669949671, guid: 3c47d207a7a268e44b1b605bcf68e152, type: 3}
