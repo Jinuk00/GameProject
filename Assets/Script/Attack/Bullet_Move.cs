@@ -6,6 +6,8 @@ public class Bullet_Move : MonoBehaviour {
 
     public float speed = 10f;
     float waitingTime=0;
+
+    public static Bullet_Move instance;
     private void Start()
     {
         //생성으로부터 2초 후 삭제

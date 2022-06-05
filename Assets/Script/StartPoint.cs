@@ -30,8 +30,8 @@ public class StartPoint : MonoBehaviour
         if(startPoint == thePlayer.currentMapName)
         {
           thePlayer.transform.position = transform.position;
-          anim.SetBool("DoubleJump",false);
-          anim.SetBool("isJumping",false);
+        //  anim.SetBool("DoubleJump",false);
+        //   anim.SetBool("isJumping",false);
 				}
     }
 
