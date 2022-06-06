@@ -26,7 +26,7 @@ public class Pattern : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > wait)
         {
-            int a=Random.Range(0,2);
+            int a=Random.Range(0,3);
             print(a);
             if (a==0)
             {
@@ -37,6 +37,13 @@ public class Pattern : MonoBehaviour
             if (a==1)
             {
                 heart_shot();
+                timer=0;
+            }
+            if (a==2)
+            {
+                Target_goto_Shot();
+                Invoke("Target_goto_Shot",0.5f);
+                Invoke("Target_goto_Shot",1);
                 timer=0;
             }
         }
@@ -199,46 +206,47 @@ public class Pattern : MonoBehaviour
             dir[33] = 270.05f;
         }
     }
-    // public void Target_goto_Shot ()
-    // {
-    //     //방향 -> Center가 Target을 바라보고 있으므로, Rotation은 방향으로 처리함
-    //     // public Transform Center;
-    //     var bl = new List<Transform>();
-    //     Vector2 pos;
-    //     pos = Boss.transform.position;
-    //     Bullet_Move.instance.speed=20f;
-    //     for (int i = 0; i < 10; i += 2)
-    //     {
-    //         var temp = Instantiate(Bullet);
-    //         //총알 생성 위치를 머즐 입구로 한다.
-    //         Destroy(temp, 10f);
-    //         temp.transform.position = pos;
-    //         bl.Add(temp.transform);
-    //         //총알의 방향을 Center의 방향으로 한다.
-    //         //->참조된 Center오브젝트가 Target을 바라보고 있으므로, Rotation이 방향이 됨.
-    //         temp.transform.rotation = Quaternion.Euler(0, 0, i);
+    public void Target_goto_Shot ()
+    {
+        //방향 -> Center가 Target을 바라보고 있으므로, Rotation은 방향으로 처리함
+        // public Transform Center;
+        var bl = new List<Transform>();
+        Vector2 pos;
+        pos = Boss.transform.position;
+        for (int i = 0; i < 10; i += 2)
+        {
+            var temp = Instantiate(Bullet);
+            //총알 생성 위치를 머즐 입구로 한다.
+            Destroy(temp, 10f);
+            temp.transform.position = pos;
+            bl.Add(temp.transform);
+            //총알의 방향을 Center의 방향으로 한다.
+            //->참조된 Center오브젝트가 Target을 바라보고 있으므로, Rotation이 방향이 됨.
+            temp.transform.rotation = Quaternion.Euler(0, 0, i);
+            temp.GetComponent<Bullet_Move>().speed = temp.GetComponent<Bullet_Move>().speed+10f;
 
-    //     }
-    //     StartCoroutine(BulletToTarget(bl));
+
+        }
+        StartCoroutine(BulletToTarget(bl));
     
-    //     IEnumerator BulletToTarget(List<Transform> bl)
-    //     {
-    //         //0.5초 후에 시작
-    //         yield return new WaitForSeconds(0);
-    //         for (int i = 0; i < bl.Count; i++)
-    //         {
-    //             //현재 총알의 위치에서 플레이의 위치의 벡터값을 뻴셈하여 방향을 구함
-    //             var target_dir = Player.transform.position - bl[i].position;
-    //             //x,y의 값을 조합하여 Z방향 값으로 변형함. -> ~도 단위로 변형
-    //             var angle = Mathf.Atan2(target_dir.y, target_dir.x) * Mathf.Rad2Deg;
-    //             //Target 방향으로 이동
-    //             bl[i].rotation = Quaternion.Euler(0, 0, angle);
-    //         }
-    //         //데이터 해제
-    //         bl.Clear();
-    //     }
-    //     Bullet_Move.instance.speed=10f;
-    // }
+        IEnumerator BulletToTarget(List<Transform> bl)
+        {
+            //0.5초 후에 시작
+            yield return new WaitForSeconds(0);
+            for (int i = 0; i < bl.Count; i++)
+            {
+                //현재 총알의 위치에서 플레이의 위치의 벡터값을 뻴셈하여 방향을 구함
+                var target_dir = Player.transform.position - bl[i].position;
+                //x,y의 값을 조합하여 Z방향 값으로 변형함. -> ~도 단위로 변형
+                var angle = Mathf.Atan2(target_dir.y, target_dir.x) * Mathf.Rad2Deg;
+                //Target 방향으로 이동
+                bl[i].rotation = Quaternion.Euler(0, 0, angle);
+            }
+            //데이터 해제
+            bl.Clear();
+        }
+
+    }
 }
 
 

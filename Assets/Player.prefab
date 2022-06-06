@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05861c3ea181c78439aaf7ee8200189f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 8
   speed: 5
 --- !u!114 &7738691252402982832
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedac48e88102c94d98b0a79d53ce17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 600
+  jumpForce: 575
   speed: 3
 --- !u!95 &995717708900162294
 Animator:

@@ -10,6 +10,7 @@ public class DoubleJumpTest : MonoBehaviour
   
   bool doubleJumpState = false;
   bool isGround = false;
+  bool jumpone = false;
   Animator anim;
 
 
@@ -19,21 +20,30 @@ public class DoubleJumpTest : MonoBehaviour
   }
 
   void Update(){
-    if (rb.velocity.y == 0)
+    if (rb.velocity.y == 0){
       isGround = true;
-    else
+    }
+    else{
       isGround = false;
+    }
 
     if(isGround)
       doubleJumpState = true;
 
     if(isGround && Input.GetButtonDown("Jump")){
+      jumpone = true;
+      print("일단");
       JumpAddForce();
     }
     else if(doubleJumpState && Input.GetButtonDown("Jump"))
     {
-      JumpAddForce();
+      if (jumpone){
+        print("이단");
+        JumpAddForce();
+      }
+      jumpone = false;
       anim.SetBool("DoubleJump", true);
+      isGround = false;
       doubleJumpState = false;
     }
 
@@ -48,7 +58,7 @@ public class DoubleJumpTest : MonoBehaviour
     //Landing Platform
     if(rb.velocity.y <0){
       // Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
-      RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 3, LayerMask.GetMask("platform"));
+      RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 4, LayerMask.GetMask("platform"));
       if(rayHit.collider != null){
         // if(rayHit.distance < 0.4f){
           //Debug.Log(rayHit.collider.name);

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Walk : MonoBehaviour {
-  public float maxSpeed = 10F;
+  public float maxSpeed;
   public float speed = 3F;
+  float RunSpeed;
   Rigidbody2D rigid;
   SpriteRenderer spriteRenderer;
   Animator anim;
@@ -39,17 +40,17 @@ public class Walk : MonoBehaviour {
     rigid.AddForce(Vector2.right * h , ForceMode2D.Impulse);
     rigid.velocity = new Vector2(h * maxSpeed , rigid.velocity.y);
     if(Input.GetKey(KeyCode.LeftShift)){
-      maxSpeed = speed+10F;
+      RunSpeed = speed+maxSpeed;
       anim.SetBool("Run", true);
     }
     else{
-      maxSpeed = speed;
+      RunSpeed = speed;
       anim.SetBool("Run", false);
     }
     //Max Speed 
-    if(rigid.velocity.x > maxSpeed) //Right Max Speed
-      rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
-    else if(rigid.velocity.x < maxSpeed*(-1)) //Left Max Speed
-      rigid.velocity = new Vector2(maxSpeed*(-1), rigid.velocity.y);
+    if(rigid.velocity.x > RunSpeed) //Right Max Speed
+      rigid.velocity = new Vector2(RunSpeed, rigid.velocity.y);
+    else if(rigid.velocity.x < RunSpeed*(-1)) //Left Max Speed
+      rigid.velocity = new Vector2(RunSpeed*(-1), rigid.velocity.y);
   }
 }
